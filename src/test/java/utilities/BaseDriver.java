@@ -13,7 +13,7 @@ public class BaseDriver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            closePreviousDrivers();
+//            closePreviousDrivers();
             Logger logger = Logger.getLogger("");
             logger.setLevel(Level.SEVERE);
             driver = new ChromeDriver();
