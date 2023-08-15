@@ -28,7 +28,7 @@ public class ProductSteps extends BaseDriver {
     public void verifyAllOrderedProductsTitlesIncludeTheWord() {
         for (int i = 0; i < p.getProductList().size(); i++) {
             System.out.println(p.getProductList().get(i).getText());
-            //Assert.assertTrue(p.getProductList().get(i).getText().contains("blue"));
+           //Assert.assertTrue(p.getProductList().get(i).getText().toLowerCase().contains("blue"));
 
         }
     }
