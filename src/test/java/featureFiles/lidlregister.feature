@@ -8,7 +8,7 @@ Feature: Lidl Register
     Given Navigate to register page
     And Fill the registration form with "<firstName>","<lastName>", "<email>","<confirmEmail>","<password>","<phone>","<zip>" and "<birthday>"
     When Click on the join button
-    Then The user should see the password worning text message
+    Then The user should see the password warning text message
 
 
 

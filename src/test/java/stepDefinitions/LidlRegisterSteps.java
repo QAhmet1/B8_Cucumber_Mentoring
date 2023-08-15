@@ -36,13 +36,12 @@ public class LidlRegisterSteps extends BaseDriver {
         ld.getJoinBtn().click();
     }
 
-    @Then("The user should see the password worning text message")
-    public void theUserShouldSeeThePasswordWorningTextMessage() {
 
+    @Then("The user should see the password warning text message")
+    public void theUserShouldSeeThePasswordWarningTextMessage() {
         if (pass.length()<8){
             System.out.println(ld.getErrorMsg().getText());
             Assert.assertTrue(ld.getErrorMsg().isDisplayed());
         }
-
     }
 }
