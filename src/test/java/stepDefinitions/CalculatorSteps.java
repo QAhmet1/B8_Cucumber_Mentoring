@@ -4,9 +4,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import pages.Calculator;
+import utilities.BaseDriver;
 
-public class CalculatorSteps {
+import java.util.List;
+
+public class CalculatorSteps extends BaseDriver {
     private Calculator calculator;
     private int result;
     @Given("Create a calculator")
@@ -32,5 +38,19 @@ public class CalculatorSteps {
     public void the_result_should_be_on_the_console(Integer expectedResult) {
         System.out.println(result+ " "+ expectedResult);
 
+    }
+
+    @Given("Navigate to demo shop website")
+    public void navigateToDemoShopWebsite() {
+        driver.get("https://demowebshop.tricentis.com/digital-downloads");
+
+    }
+
+    @Then("Verfy the left naw elements")
+    public void verfyTheLeftNawElements() {
+        List<WebElement>itemList=driver.findElements(By.xpath("//li[@class='inactive']"));
+        for (WebElement element : itemList) {
+            Assert.assertTrue(element.isDisplayed());
+        }
     }
 }

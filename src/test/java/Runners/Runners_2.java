@@ -7,7 +7,6 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/java/featureFiles/lidlregister.feature",  // location of your feature files
         glue = "stepDefinitions"     // location of your step definitions
 )
-
 public class Runners_2 extends AbstractTestNGCucumberTests {
 
 }
